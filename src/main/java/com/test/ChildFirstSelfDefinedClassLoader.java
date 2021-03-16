@@ -7,6 +7,7 @@ import java.security.SecureClassLoader;
 
 class ChildFirstSelfDefinedClassLoader extends SecureClassLoader {
 
+    // loadClass -> findClass
     @Override
     protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
         if(name.startsWith("com.test")){

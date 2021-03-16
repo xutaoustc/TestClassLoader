@@ -1,6 +1,6 @@
 package com.test;
 
-public class TestChildFirstSelfDefinedClassLoader {
+public class Z4_TestChildFirstSelfDefinedClassLoader {
     public static void main(String[] args) throws Exception{
 //        SelfDefinedClassLoader classLoader = new SelfDefinedClassLoader();      // 用这个类加载器加载不到jar包中的类
         ChildFirstSelfDefinedClassLoader classLoader = new ChildFirstSelfDefinedClassLoader();

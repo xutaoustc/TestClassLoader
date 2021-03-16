@@ -1,16 +1,11 @@
 package com.test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.security.SecureClassLoader;
 
-public class TestSelfDefinedClassLoader {
+public class Z1_TestClassLoader {
     public static void main(String[] args) throws Exception {
-        // 默认父加载器是AppClassLoader
-        SelfDefinedClassLoader classLoader = new SelfDefinedClassLoader();
+        URLClassLoader classLoader = new URLClassLoader(new URL[]{new URL("https://gitee.com/xutao_ustc/ClassLoaderJarsHub/raw/master/basic/JustProvideClass-1.0.jar")});
 
         Class<?> clazz = classLoader.loadClass("com.test.TestClass");
         Object object = clazz.newInstance();
