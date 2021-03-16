@@ -5,7 +5,7 @@ import java.net.URLClassLoader;
 
 public class TestClassLoader {
     public static void main(String[] args) throws Exception {
-        URL jarPath = new URL("https://github.com/xutaoustc/ClassLoaderJarsHub/raw/main/basic/JustProvideClass-1.0.jar");
+        URL jarPath = new URL("https://gitee.com/xutao_ustc/ClassLoaderJarsHub/raw/master/basic/JustProvideClass-1.0.jar");
         URLClassLoader classLoader = new URLClassLoader(new URL[]{jarPath});
 
         Class<?> clazz = classLoader.loadClass("com.test.TestClass");
