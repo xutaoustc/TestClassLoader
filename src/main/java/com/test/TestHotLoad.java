@@ -1,8 +1,9 @@
 package com.test;
 
-public class HotLoad {
+public class TestHotLoad {
     public static void main(String[] args) throws Exception {
         while(true){
+            // 关键在于每次要新建一个ClassLoader，破除其中的缓存，否则热加载不会生效
             SelfDefinedClassLoader classLoader = new SelfDefinedClassLoader();
 
             Class<?> clazz = classLoader.loadClass("com.test.TestClass");
